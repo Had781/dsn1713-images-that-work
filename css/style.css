@@ -1,0 +1,339 @@
+/* ============================================================
+   1. BRAND TOKENS + BOOTSTRAP OVERRIDES
+   Bootstrap reads its own --bs-* variables, so overriding them
+   here restyles the whole framework.
+   ============================================================ */
+:root {
+  --ridge-dark:   #1a1a18;
+  --ridge-cream:  #f5f2ec;
+  --ridge-orange: #c8722a;
+  --ridge-muted:  #8c8c7a;
+  --ridge-body:   #3d3d38;
+  --ridge-line:   #3d3d38;
+
+  --bs-body-font-family: 'Inter', sans-serif;
+  --bs-body-font-weight: 300;
+  --bs-body-line-height: 1.6;
+  --bs-body-bg: var(--ridge-cream);
+  --bs-body-color: var(--ridge-dark);
+}
+
+.container {
+  max-width: 1200px;
+  --bs-gutter-x: 4rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+}
+
+.text-ridge-orange { color: var(--ridge-orange); }
+.text-ridge-muted  { color: var(--ridge-muted); }
+.text-ridge-cream  { color: var(--ridge-cream); }
+.bg-ridge-dark     { background-color: var(--ridge-dark); }
+
+.tracking-wide    { letter-spacing: 0.05em; }
+.tracking-wider   { letter-spacing: 0.1em; }
+.tracking-widest  { letter-spacing: 0.15em; }
+
+.fs-xs  { font-size: 0.75rem; }
+.fs-xxs { font-size: 0.7rem; }
+
+.ratio-3x2 { --bs-aspect-ratio: 66.6667%; }
+
+.section-pad {
+  padding-block: 6rem;
+}
+
+.btn-ridge,
+.btn-ridge-outline-light,
+.btn-ridge-outline-dark {
+  --bs-btn-border-radius: 0;
+  --bs-btn-font-family: 'Inter', sans-serif;
+  --bs-btn-font-weight: 500;
+  --bs-btn-font-size: 0.85rem;
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-padding-y: 0.85rem;
+  --bs-btn-focus-shadow-rgb: 200, 114, 42;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn-ridge.btn-sm,
+.btn-ridge-outline-dark.btn-sm {
+  --bs-btn-padding-x: 1.25rem;
+  --bs-btn-padding-y: 0.5rem;
+  --bs-btn-font-size: 0.75rem;
+}
+
+.btn-ridge {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: var(--ridge-orange);
+  --bs-btn-border-color: var(--ridge-orange);
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--ridge-dark);
+  --bs-btn-hover-border-color: var(--ridge-dark);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: var(--ridge-dark);
+  --bs-btn-active-border-color: var(--ridge-dark);
+}
+
+.site-header .btn-ridge {
+  --bs-btn-hover-color: var(--ridge-dark);
+  --bs-btn-hover-bg: var(--ridge-cream);
+  --bs-btn-hover-border-color: var(--ridge-cream);
+}
+
+.btn-ridge-outline-light {
+  --bs-btn-color: #ffffff;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #ffffff;
+  --bs-btn-border-width: 2px;
+  --bs-btn-hover-color: var(--ridge-dark);
+  --bs-btn-hover-bg: #ffffff;
+  --bs-btn-hover-border-color: #ffffff;
+  --bs-btn-active-color: var(--ridge-dark);
+  --bs-btn-active-bg: #ffffff;
+  --bs-btn-active-border-color: #ffffff;
+}
+
+.btn-ridge-outline-dark {
+  --bs-btn-color: var(--ridge-dark);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--ridge-dark);
+  --bs-btn-border-width: 1.5px;
+  --bs-btn-hover-color: #ffffff;
+  --bs-btn-hover-bg: var(--ridge-dark);
+  --bs-btn-hover-border-color: var(--ridge-dark);
+  --bs-btn-active-color: #ffffff;
+  --bs-btn-active-bg: var(--ridge-dark);
+  --bs-btn-active-border-color: var(--ridge-dark);
+}
+
+.text-link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ridge-orange);
+  letter-spacing: 0.02em;
+}
+
+.text-link:hover {
+  color: var(--ridge-cream);
+}
+
+.site-header .navbar {
+  --bs-navbar-color: rgba(245, 242, 236, 0.8);
+  --bs-navbar-hover-color: var(--ridge-cream);
+  --bs-navbar-active-color: var(--ridge-cream);
+  --bs-navbar-nav-link-padding-x: 0;
+}
+
+.site-header .nav-link {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.hero__title {
+  font-size: clamp(5rem, 12vw, 10rem);
+  line-height: 0.95;
+}
+
+.banner-title {
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  line-height: 0.95;
+}
+
+.lede {
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: rgba(245, 242, 236, 0.8);
+}
+
+.hero__sub {
+  max-width: 380px;
+}
+
+.card-title-display {
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.gear-card__desc {
+  font-size: 0.9rem;
+  color: var(--ridge-body);
+  line-height: 1.65;
+}
+
+.gear-card__price {
+  font-size: 1.5rem;
+}
+
+.gear-card__image img,
+.note-card__image img {
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gear-card:hover .gear-card__image img,
+.note-card:hover .note-card__image img {
+  transform: scale(1.04);
+}
+
+.trail-notes,
+.site-footer {
+  --bs-border-color: var(--ridge-line);
+}
+
+.note-card__title {
+  font-size: 1.5rem;
+  line-height: 1.15;
+}
+
+.note-card__excerpt {
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+
+/* ============================================================
+   Everything you write or change in this file goes in this
+   section. Don't edit Bootstrap classes or sections above.
+   ============================================================ */
+
+/* ---------- LOGO (Task 1) ----------
+   No CSS changes needed for Task 1. */
+.logo {
+  height: 36px;
+  width: auto;
+}
+
+
+/* ---------- HERO (Task 3) ---------- */
+
+/* TASK 3, STEP 1: Delete the background-image line below.
+   Leave every other property in this rule alone. */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  background-image: url('../images/hero.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* TASK 3, STEP 2: Write a new rule here that targets your
+   hero <img> (give it the class hero__img) so it fills the
+   section behind the text. */
+
+
+/* Gradient overlay — darkens the bottom of the hero so the text
+   is readable. Leave as is. */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 18, 0.85) 0%,
+    rgba(20, 20, 18, 0.2) 60%,
+    transparent 100%
+  );
+}
+
+/* Keeps the text above the overlay. Leave as is. */
+.hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* ---------- LANDSCAPE BANNER (Task 7) ---------- */
+
+/* TASK 7, STEP 1: Delete the background-image line below.
+   Leave every other property in this rule alone. */
+.landscape-banner {
+  position: relative;
+  min-height: 70vh;
+  background-image: url('../images/landscape-banner.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* TASK 7, STEP 3: Write a new rule here that targets your
+   banner <img> (give it the class landscape-banner__img) so it
+   fills the section. Same approach as Task 3. */
+
+
+/* Dark overlay over the whole banner. If the overlay disappears
+   after you add your <img>, add z-index: 1; to this rule. */
+.landscape-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 18, 0.65);
+}
+
+/* Keeps the text above the overlay. Leave as is. */
+.landscape-banner__content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+/* ============================================================
+   END OF YOUR WORK
+   ============================================================ */
+
+
+
+.site-footer {
+  padding-top: 5rem;
+}
+
+.footer-logo-text {
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+}
+
+.footer-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ridge-cream);
+  margin-bottom: 1.25rem;
+}
+
+.footer-link {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ridge-muted);
+  margin-bottom: 0.6rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--ridge-cream);
+}
